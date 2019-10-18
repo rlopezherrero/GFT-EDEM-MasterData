@@ -39,7 +39,7 @@ def upload_sftp():
 	cnopts = pysftp.CnOpts()
 	cnopts.hostkeys = None
     
-	#4. Create a pysftp connection with host="35.222.158.208", username="edemExercise3", password="edemExercise3",cnopts = cnopts
+	#4. Create a pysftp connection with host="35.223.130.234", username="edemExercise3", password="edemExercise3",cnopts = cnopts
 	
 	json_remote_file = "comments."+str(time.time())+".json"
 	
