@@ -16,7 +16,7 @@ default_args = {
 	#1. Put your name
     'owner': 'Roberto', 
     'retries': 1,
-	'start_date':  datetime.now(),
+	'start_date': datetime(2019, 10, 19, 7, 00, 00, 000000),
     'retry_delay': timedelta(minutes=5),
 }
 
