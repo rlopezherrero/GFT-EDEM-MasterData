@@ -388,7 +388,7 @@
                     </entry>
                     <entry>
                         <key>Remote URL</key>
-                        <value>https://sandbox.iexapis.com/stable//stock/market/batch?symbols=aapl,fb,tsla&amp;types=quote&amp;token=Tpk_f6b2aa0a7ec646c89cebcc40bdb433aa</value>
+                        <value>https://sandbox.iexapis.com/stable//stock/market/batch?symbols=aapl,fb,tsla&amp;types=quote&amp;token=your_Testing_token</value>
                     </entry>
                     <entry>
                         <key>SSL Context Service</key>
@@ -603,5 +603,5 @@
             <type>org.apache.nifi.processors.gcp.pubsub.PublishGCPubSub</type>
         </processors>
     </snippet>
-    <timestamp>11/10/2019 19:24:19 CET</timestamp>
+    <timestamp>11/10/2019 19:32:09 CET</timestamp>
 </template>
