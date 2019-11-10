@@ -2,7 +2,7 @@
 <template encoding-version="1.2">
     <description></description>
     <groupId>e163aed1-016b-1000-9bdf-9a343c6828f4</groupId>
-    <name>iexCloudStreaming</name>
+    <name>iexCloudTemplate</name>
     <snippet>
         <connections>
             <id>5df622ec-a366-3868-0000-000000000000</id>
@@ -564,7 +564,7 @@
                 <properties>
                     <entry>
                         <key>gcp-project-id</key>
-                        <value>versatile-gist-251107</value>
+                        <value>putYourProjectId</value>
                     </entry>
                     <entry>
                         <key>GCP Credentials Provider Service</key>
@@ -603,5 +603,5 @@
             <type>org.apache.nifi.processors.gcp.pubsub.PublishGCPubSub</type>
         </processors>
     </snippet>
-    <timestamp>11/10/2019 19:19:53 CET</timestamp>
+    <timestamp>11/10/2019 19:24:19 CET</timestamp>
 </template>
