@@ -29,10 +29,12 @@ We are  going to use already provided ElasticStreaming Virtual Machine, but we n
 	* Click on Create Service  Account
 	* Create service account called streaming, and click on Continue
 	<img src="./img/CreateKey.png" width="75%">
+	
 	* Add permissions to pub/sub read and consume, and click Continue
 	<img src="./img/CreateKey2.png" width="75%">
+	
 	* Click on Create key, select JSON as key type and finally on Done. That will download a Json file with your credentials
-	<img src="./img/CreateKey3.png" width="75%">
+	<img src="./img/CreateKey3.png" width="50%">
 
 * Open a terminal and move the json key downloaded to Crendentials folder. Run the following:
 ```
