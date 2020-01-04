@@ -15,7 +15,7 @@ We are  going to use already provided ElasticStreaming Virtual Machine, but we n
 * Open Web Browser and go to  http://console.cloud.google.com/
 
 * Create a new project called hackathon.
-![Create google cloud project](img/CreateProject.png){: width="100px"}
+![Create google cloud project](img/CreateProject.png){: height="36px" width="36px"}
 
 * Go to pub/sub on left panel and create topic calling it valenbisi.
 ![Create valenbisi topic](img/CreateTopic.png | width=100)
