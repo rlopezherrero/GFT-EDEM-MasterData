@@ -15,13 +15,13 @@ We are  going to use already provided ElasticStreaming Virtual Machine, but we n
 * Open Web Browser and go to  http://console.cloud.google.com/
 
 * Create a new project called hackathon.
-<img src="./img/CreateProject.png" width="75%">
+<img src="./img/CreateProject.png" width="75%" border="5">
 
 * Go to pub/sub on left panel and create topic calling it valenbisi.
-<img src="./img/CreateTopic.png" width="50%">
+<img src="./img/CreateTopic.png" width="50%" border="5">
 
 * Click to the topic already created go down and click on Create Subscription called streaming, left rest as default:
-<img src="./img/CreateSubscription.png" width="75%">
+<img src="./img/CreateSubscription1.png" width="75%">
 <img src="./img/CreateSubscription2.png" width="75%">
 
 * Donwload key to be able to consume and populate messages to pub/sub. 
