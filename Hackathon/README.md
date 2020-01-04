@@ -15,24 +15,24 @@ We are  going to use already provided ElasticStreaming Virtual Machine, but we n
 * Open Web Browser and go to  http://console.cloud.google.com/
 
 * Create a new project called hackathon.
-<img src="./img/CreateProject.png" >
+<img src="./img/CreateProject.png" width="75%">
 
 * Go to pub/sub on left panel and create topic calling it valenbisi.
-<img src="./img/CreateTopic.png" width="100%">
+<img src="./img/CreateTopic.png" width="50%">
 
 * Click to the topic already created go down and click on Create Subscription called streaming, left rest as default:
-![Create subscription](img/CreateSubscription.png | width=200)
-![Create subscription2](img/CreateSubscription2.png | width=300)
+<img src="./img/CreateSubscription.png" width="75%">
+<img src="./img/CreateSubscription2.png" width="75%">
 
 * Donwload key to be able to consume and populate messages to pub/sub. 
 	* Go to left panel to IAM & admin --> Service accounts
 	* Click on Create Service  Account
 	* Create service account called streaming, and click on Continue
-	![Create key](img/CreateKey.png | width=300)
+	<img src="./img/CreateKey.png" width="75%">
 	* Add permissions to pub/sub read and consume, and click Continue
-	![Create key](img/CreateKey2.png | width=300)
-	* Clilck on Create key, select JSON as key type and finally on Done. That will download a Json file with your credentials
-	![Create key](img/CreateKey3.png | width=300)
+	<img src="./img/CreateKey2.png" width="75%">
+	* Click on Create key, select JSON as key type and finally on Done. That will download a Json file with your credentials
+	<img src="./img/CreateKey3.png" width="75%">
 
 * Open a terminal and move the json key downloaded to Crendentials folder. Run the following:
 ```
