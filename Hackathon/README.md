@@ -21,18 +21,18 @@ We are  going to use already provided ElasticStreaming Virtual Machine, but we n
 ![Create valenbisi topic](img/CreateTopic.png | width=300)
 
 * Click to the topic already created go down and click on Create Subscription called streaming, left rest as default:
-![Create subscription](img/CreateSubscription.png | width=300)
-![Create subscription2](img/CreateSubscription2.png | width=300)
+`![Create subscription](img/CreateSubscription.png | width=300)`
+`![Create subscription2](img/CreateSubscription2.png | width=300)`
 
 * Donwload key to be able to consume and populate messages to pub/sub. 
-** Go to left panel to IAM & admin --> Service accounts
-** Click on Create Service  Account
-** Create service account called streaming, and click on Continue
-![Create key](img/CreateKey.png | width=300)
-** Add permissions to pub/sub read and consume, and click Continue
-![Create key](img/CreateKey2.png | width=300)
-** Clilck on Create key, select JSON as key type and finally on Done. That will download a Json file with your credentials
-![Create key](img/CreateKey3.png | width=300)
+	* Go to left panel to IAM & admin --> Service accounts
+	* Click on Create Service  Account
+	* Create service account called streaming, and click on Continue
+	![Create key](img/CreateKey.png | width=300)
+	* Add permissions to pub/sub read and consume, and click Continue
+	![Create key](img/CreateKey2.png | width=300)
+	* Clilck on Create key, select JSON as key type and finally on Done. That will download a Json file with your credentials
+	![Create key](img/CreateKey3.png | width=300)
 
 * Open a terminal and move the json key downloaded to Crendentials folder. Run the following:
 ```
