@@ -18,11 +18,11 @@ We are  going to use already provided ElasticStreaming Virtual Machine, but we n
 ![Create google cloud project](img/CreateProject.png | width=300 )
 
 * Go to pub/sub on left panel and create topic calling it valenbisi.
-![Create valenbisi topic](img/CreateTopic.png | width=300)
+![Create valenbisi topic](img/CreateTopic.png | width=100)
 
 * Click to the topic already created go down and click on Create Subscription called streaming, left rest as default:
-`![Create subscription](img/CreateSubscription.png | width=300)`
-`![Create subscription2](img/CreateSubscription2.png | width=300)`
+![Create subscription](img/CreateSubscription.png | width=200)
+![Create subscription2](img/CreateSubscription2.png | width=300)
 
 * Donwload key to be able to consume and populate messages to pub/sub. 
 	* Go to left panel to IAM & admin --> Service accounts
@@ -81,34 +81,30 @@ Here you can find a detailed diagram of the application provided:
 ![Exercise architecture](img/DiagramaDetallado.png)
 
 * Launch Streaming application:
-** Open a terminal and configure google credentials running the following:
-```
-export GOOGLE_APPLICATION_CREDENTIALS=/home/edem/Credentials/mobilityApp.json
-```  
-** Launch spyder running 
-```
-spyder
-```  
-** Open mobility application downloaded available on /home/edem/Exercises/hackathon/GFT-EDEM-MasterData/Hackathon/Streaming/ElasticWritter.py
-
-** Launch it and check the console to  see that is running without errors.
+	* Open a terminal and configure google credentials running the following:
+	```
+	export GOOGLE_APPLICATION_CREDENTIALS=/home/edem/Credentials/mobilityApp.json
+	```  
+	* Launch spyder running 
+	```
+	spyder
+	```  
+	* Open mobility application downloaded available on /home/edem/Exercises/hackathon/GFT-EDEM-MasterData/Hackathon/Streaming/ElasticWritter.py
+	* Launch it and check the console to  see that is running without errors.
 
 
 * Launch Nifi:
-** Open a terminal and configure google credentials running the following:
-```
-export GOOGLE_APPLICATION_CREDENTIALS=/home/edem/Credentials/mobilityApp.json
-```  
-** Launch Nifi application
-```
-Software/nifi-1.9.2/bin/nifi.sh run
-```  
-** Load Valenbici template available on /home/edem/Exercises/hackathon/GFT-EDEM-MasterData/Hackathon/nifi/mobilityIngestion.xml
-```
-
-** Go to the Pub/Sub publisher Box, click on properties and configure the project to use your google project id created. 
-
-* Finally launch the workflow. 
+	* Open a terminal and configure google credentials running the following:
+	```
+	export GOOGLE_APPLICATION_CREDENTIALS=/home/edem/Credentials/mobilityApp.json
+	```  
+	* Launch Nifi application
+	```
+	Software/nifi-1.9.2/bin/nifi.sh run
+	```  
+	* Load Valenbici template available on /home/edem/Exercises/hackathon/GFT-EDEM-MasterData/Hackathon/nifi/mobilityIngestion.xml
+	* Go to the Pub/Sub publisher Box, click on properties and configure the project to use your google project id created. 
+	* Finally launch the workflow. 
 
 * Validate on  Spyder console that you see the messages printed. 
 
