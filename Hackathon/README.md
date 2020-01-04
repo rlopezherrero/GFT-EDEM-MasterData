@@ -21,19 +21,20 @@ We are  going to use already provided ElasticStreaming Virtual Machine, but we n
 <img src="./img/CreateTopic.png" width="50%"><br/>
 
 * Click to the topic already created go down and click on Create Subscription called streaming, left rest as default:
-<img src="./img/CreateSubscription1.png" width="75%"><br/>
+<img src="./img/CreateSubscription1.png" width="75%">
+<br/>
 <img src="./img/CreateSubscription2.png" width="75%">
 
 * Donwload key to be able to consume and populate messages to pub/sub. 
 	* Go to left panel to IAM & admin --> Service accounts
 	* Click on Create Service  Account
-	* Create service account called streaming, and click on Continue
+	* Create service account called streaming, and click on Continue:<br/>
 	<img src="./img/CreateKey.png" width="75%"><br/>
 	
-	* Add permissions to pub/sub read and consume, and click Continue
+	* Add permissions to pub/sub read and consume, and click Continue:<br/>
 	<img src="./img/CreateKey2.png" width="75%"><br/>
 	
-	* Click on Create key, select JSON as key type and finally on Done. That will download a Json file with your credentials
+	* Click on Create key, select JSON as key type and finally on Done. That will download a Json file with your credentials:<br/>
 	<img src="./img/CreateKey3.png" width="50%"><br/>
 
 * Open a terminal and move the json key downloaded to Crendentials folder. Run the following:
