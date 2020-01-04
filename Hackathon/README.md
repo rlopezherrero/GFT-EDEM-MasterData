@@ -15,7 +15,7 @@ We are  going to use already provided ElasticStreaming Virtual Machine, but we n
 * Open Web Browser and go to  http://console.cloud.google.com/
 
 * Create a new project called hackathon.
-![Create google cloud project](img/CreateProject.png | width=300 )
+![Create google cloud project](img/CreateProject.png){:width="300px"}
 
 * Go to pub/sub on left panel and create topic calling it valenbisi.
 ![Create valenbisi topic](img/CreateTopic.png | width=100)
@@ -59,10 +59,10 @@ pip install elasticsearch
 ## Run the platform
 
 * Launch elasticsearch:
-** Open a terminal and run the following
-```
-Software/elasticsearch-7.4.2/bin/elasticsearch
-```  
+	* Open a terminal and run the following
+	```
+	Software/elasticsearch-7.4.2/bin/elasticsearch
+	```  
 
 * Launch kibana:
 ```
