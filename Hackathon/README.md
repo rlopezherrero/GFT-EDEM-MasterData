@@ -74,8 +74,12 @@ Software/kibana-7.4.2-linux-x86_64/bin/kibana
 
 * Open web browser to validate that kibana has been launched successfully --> http://localhost:5601
 
-* Setup the Dashboards. 
-
+* Setup the Dashboards. Go to Management / Kibana (saved objects) / Import 
+	```
+	/home/edem/Exercises/hackathon/GFT-EDEM-MasterData/Hackathon/kibana/export.ndjson
+	```  
+* Go to Dashboards: 
+![Kibana Dashboard](img/KibanaDashboard.png)
 
 ## Launching the application
 
@@ -119,8 +123,8 @@ Here you can find a detailed diagram of the application provided:
 
 * Urls:
 
-Kibana: localhost:5601
-Nifi: localhost:8080/nifi
+	* Kibana: http://localhost:5601
+	* Nifi:   http://localhost:8080/nifi
 
 
 
