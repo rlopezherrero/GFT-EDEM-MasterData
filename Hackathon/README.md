@@ -115,4 +115,12 @@ Here you can find a detailed diagram of the application provided:
 
 
 
+## Useful Information:
+
+* Urls:
+
+Kibana: localhost:5601
+Nifi: localhost:8080/nifi
+
+
 
