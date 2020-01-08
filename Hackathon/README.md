@@ -11,10 +11,11 @@ Here you can have high level architecture of the application provided.
 
 We are  going to use already provided ElasticStreaming Virtual Machine, but we need to configure it to use 6GB of RAM. 
 
+* Start virtual machine and logon. 
 
 * Open Web Browser and go to  http://console.cloud.google.com/
 
-* Create a new project called hackathon.
+* Create a new project called hackathon and move to it. 
 <img src="./img/CreateProject.png" width="75%"><br/>
 
 * Go to pub/sub on left panel and create topic calling it valenbisi.
@@ -36,6 +37,11 @@ We are  going to use already provided ElasticStreaming Virtual Machine, but we n
 	
 	* Click on Create key, select JSON as key type and finally on Done. That will download a Json file with your credentials:<br/>
 	<img src="./img/CreateKey3.png" width="50%"><br/>
+
+* Enable pub/sub API
+	* Going to API & Services on left panel 
+	* Click on Enable Apis & Services
+	* Look for Pub/Sub and enable it. 
 
 * Open a terminal and move the json key downloaded to Crendentials folder. Run the following:
 ```
