@@ -12,34 +12,22 @@ from apache_beam.options.pipeline_options import StandardOptions
 
 from apache_beam.options.pipeline_options import SetupOptions
 
+from elasticsearch import Elasticsearch 
+
 #import TableSchema
 #import FormatQuote
 import json
 
 
-class FormatQuote(beam.DoFn):
+class IndexDocument(beam.DoFn):
    
+    es=Elasticsearch([{'host':'localhost','port':9200}])
     
-    def process(self, element):
+    def process(self,element):
         
-        quote = json.loads(element)['quote']
-        #return [quote]
-        return [{'symbol':quote['symbol'],
-                 'companyName':quote['companyName'],
-                 'primaryExchange':quote['primaryExchange'],
-                 'calculationPrice':quote['calculationPrice'],
-                 'open':quote['open'],
-                 'openTime':quote['openTime'],
-                 'close':quote['close'],
-                 'closeTime':quote['closeTime'],
-                 'high':quote['high'],
-                 'low':quote['low'],
-                 'latestPrice':quote['latestPrice'],
-                 'latestVolume':quote['latestVolume'],
-                 'latestTime':quote['latestTime'],
-                 'latestUpdate':quote['latestUpdate'],
-                 
-                 }]
+        res = self.es.index(index='valenbisi',body=element)
+        
+        print(res)
  
         
     
@@ -47,18 +35,14 @@ def run(argv=None, save_main_session=True):
   """Main entry point; defines and runs the wordcount pipeline."""
   parser = argparse.ArgumentParser()
   
+  #1 Replace your hackathon-edem with your project id 
   parser.add_argument('--input_topic',
                       dest='input_topic',
                       #1 Add your project Id and topic name you created
                       # Example projects/versatile-gist-251107/topics/iexCloud',
                       default='projects/hackathon-edem/topics/valenbisi',
                       help='Input file to process.')
-  parser.add_argument('--output',
-                      dest='output',
-                      #2 Add your project Id and Dataset and table name you created
-                      # Example versatile-gist-251107:Stocks.quotes',
-                      default='versatile-gist-251107:Stocks.quotes',
-                      help='Table where the quotes are stored')
+  #2 Replace your hackathon-edem with your project id 
   parser.add_argument('--input_subscription',
                       dest='input_subscription',
                       #3 Add your project Id and Subscription you created you created
@@ -76,12 +60,11 @@ def run(argv=None, save_main_session=True):
   pipeline_options = PipelineOptions(pipeline_args)
    
   google_cloud_options = pipeline_options.view_as(GoogleCloudOptions)
-  #4 Add your project ID
-  #Example versatile-gist-251107
+  #3 Replace your hackathon-edem with your project id 
   google_cloud_options.project = 'hackathon-edem'
   google_cloud_options.job_name = 'myjob'
-  #5 Add your created bucket
-  #€xample edem-bucket-roberto
+ 
+  # Uncomment below and add your bucket if you want to execute on Dataflow
   #google_cloud_options.staging_location = 'gs://edem-bucket-roberto/binaries'
   #google_cloud_options.temp_location = 'gs://edem-bucket-roberto/temp'
 
@@ -93,25 +76,21 @@ def run(argv=None, save_main_session=True):
   pipeline_options.view_as(SetupOptions).save_main_session = save_main_session
 
 
+ 
+
   p = beam.Pipeline(options=pipeline_options)
 
-  #quotesSchema=TableSchema.tableSchema.quotes_schema
 
   # Read the pubsub messages into a PCollection.
-  quotes = p | beam.io.ReadFromPubSub(subscription=known_args.input_subscription)
+  biciStations = p | beam.io.ReadFromPubSub(subscription=known_args.input_subscription)
+
+  # Print messages received
+  biciStations | 'Print Quote' >> beam.Map(print)
+  
+  # Store messages on elastic
+  biciStations | 'Bici Stations Stored' >> beam.ParDo(IndexDocument())
 
   
-  #quotesFormatted = ( quotes | 'Format Quote' >> beam.ParDo(FormatQuote()))
-
-  quotes | 'Print Quote' >> beam.Map(print)
-   
-
-  #quotesFormatted | 'Store Big Query' >> beam.io.WriteToBigQuery(
-  #      known_args.output,
-  #      schema=quotesSchema,
-  #      create_disposition=beam.io.BigQueryDisposition.CREATE_IF_NEEDED,
-  #      write_disposition=beam.io.BigQueryDisposition.WRITE_APPEND)
-
  
   result = p.run()
   result.wait_until_finish()
