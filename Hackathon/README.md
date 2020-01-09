@@ -105,8 +105,7 @@ PUT valenbisi
 	```
 	/home/edem/Exercises/hackathon/GFT-EDEM-MasterData/Hackathon/kibana/export.ndjson
 	```  
-* Go to Dashboards: 
-![Kibana Dashboard](img/KibanaDashboard.png)
+
 
 ## Launching the application
 
@@ -143,6 +142,7 @@ Here you can find a detailed diagram of the application provided:
 * Validate on  Spyder console that you see the messages printed. 
 
 * Go to Kibana dashboard and see that you see it updated on real time. 
+![Kibana Dashboard](img/KibanaDashboard.png)
 
 
 
