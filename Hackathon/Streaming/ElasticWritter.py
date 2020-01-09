@@ -14,8 +14,6 @@ from apache_beam.options.pipeline_options import SetupOptions
 
 from elasticsearch import Elasticsearch 
 
-#import TableSchema
-#import FormatQuote
 import json
 
 
@@ -66,14 +64,14 @@ def run(argv=None, save_main_session=True):
                       dest='input_topic',
                       #1 Add your project Id and topic name you created
                       # Example projects/versatile-gist-251107/topics/iexCloud',
-                      default='projects/hackaton-264420/topics/valenbisi',
+                      default='projects/hackathon-edem/topics/valenbisi',
                       help='Input file to process.')
   #2 Replace your hackathon-edem with your project id 
   parser.add_argument('--input_subscription',
                       dest='input_subscription',
                       #3 Add your project Id and Subscription you created you created
                       # Example projects/versatile-gist-251107/subscriptions/quotesConsumer',
-                      default='projects/hackaton-264420/subscriptions/streaming',
+                      default='projects/hackathon-edem/subscriptions/streaming',
                       help='Input Subscription')
   
   
@@ -87,7 +85,7 @@ def run(argv=None, save_main_session=True):
    
   google_cloud_options = pipeline_options.view_as(GoogleCloudOptions)
   #3 Replace your hackathon-edem with your project id 
-  google_cloud_options.project = 'hackaton-264420'
+  google_cloud_options.project = 'hackathon-edem'
   google_cloud_options.job_name = 'myjob'
  
   # Uncomment below and add your bucket if you want to execute on Dataflow
