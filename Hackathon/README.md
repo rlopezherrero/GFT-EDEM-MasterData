@@ -37,7 +37,8 @@ We are  going to use already provided ElasticStreaming Virtual Machine, but we n
 	
 	* Click on Create key, select JSON as key type and finally on Done. That will download a Json file with your credentials:<br/>
 	<img src="./img/CreateKey3.png" width="50%"><br/>
-
+	
+	
 * Enable pub/sub API
 	* Going to API & Services on left panel 
 	* Click on Enable Apis & Services
@@ -47,6 +48,12 @@ We are  going to use already provided ElasticStreaming Virtual Machine, but we n
 ```
 cp Downloads/your_downloaded_credentials.json Credentials/mobilityApp.json
 ```  
+
+* Edit /home/edem/bash.rc file commenting previous crendentials and adding this one as google application credentials:
+´´´
+#export GOOGLE_APPLICATION_CREDENTIALS=/home/edem/Credentials/iexCloudApp.json
+export GOOGLE_APPLICATION_CREDENTIALS=/home/edem/Credentials/mobilityApp.json
+´´´
 
 * Create google environment variable to point to this key file. Run the following:
 ```
@@ -79,6 +86,20 @@ Software/kibana-7.4.2-linux-x86_64/bin/kibana
 ```  
 
 * Open web browser to validate that kibana has been launched successfully --> http://localhost:5601
+
+* Go to Dev Tools on left pannel and create a mapping for location geo point. 
+```
+PUT valenbisi
+{
+  "mappings": {
+    "properties": {
+      "location": {
+        "type": "geo_point"
+      }
+    }
+  }
+}
+```
 
 * Setup the Dashboards. Go to Management / Kibana (saved objects) / Import 
 	```
