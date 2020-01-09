@@ -50,10 +50,10 @@ cp Downloads/your_downloaded_credentials.json Credentials/mobilityApp.json
 ```  
 
 * Edit /home/edem/bash.rc file commenting previous crendentials and adding this one as google application credentials:
-´´´
+```
 #export GOOGLE_APPLICATION_CREDENTIALS=/home/edem/Credentials/iexCloudApp.json
 export GOOGLE_APPLICATION_CREDENTIALS=/home/edem/Credentials/mobilityApp.json
-´´´
+```
 
 * Create google environment variable to point to this key file. Run the following:
 ```
