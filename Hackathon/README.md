@@ -55,10 +55,6 @@ cp Downloads/your_downloaded_credentials.json Credentials/mobilityApp.json
 export GOOGLE_APPLICATION_CREDENTIALS=/home/edem/Credentials/mobilityApp.json
 ```
 
-* Create google environment variable to point to this key file. Run the following:
-```
-export GOOGLE_APPLICATION_CREDENTIALS=/home/edem/Credentials/mobilityApp.json
-```  
 
 Create a directory to donwload the Mobility application. Run the following:
 ```
@@ -102,9 +98,9 @@ PUT valenbisi
 ```
 
 * Setup the Dashboards. Go to Management / Kibana (saved objects) / Import 
-	```
-	/home/edem/Exercises/hackathon/GFT-EDEM-MasterData/Hackathon/kibana/export.ndjson
-	```  
+```
+/home/edem/Exercises/hackathon/GFT-EDEM-MasterData/Hackathon/kibana/export.ndjson
+```  
 
 
 ## Launching the application
@@ -115,9 +111,6 @@ Here you can find a detailed diagram of the application provided:
 
 * Launch Streaming application:
 	* Open a terminal and configure google credentials running the following:
-	```
-	export GOOGLE_APPLICATION_CREDENTIALS=/home/edem/Credentials/mobilityApp.json
-	```  
 	* Launch spyder running 
 	```
 	spyder
@@ -127,10 +120,6 @@ Here you can find a detailed diagram of the application provided:
 
 
 * Launch Nifi:
-	* Open a terminal and configure google credentials running the following:
-	```
-	export GOOGLE_APPLICATION_CREDENTIALS=/home/edem/Credentials/mobilityApp.json
-	```  
 	* Launch Nifi application
 	```
 	Software/nifi-1.9.2/bin/nifi.sh run
