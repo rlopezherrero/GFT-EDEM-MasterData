@@ -120,6 +120,7 @@ Here you can find a detailed diagram of the application provided:
 	spyder
 	```  
 	* Open mobility application downloaded available on /home/edem/Exercises/hackathon/GFT-EDEM-MasterData/Hackathon/Streaming/ElasticWritter.py
+	* Configure your project-id on the code following the comments (1,2,3)
 	* Launch it and check the console to  see that is running without errors.
 
 
