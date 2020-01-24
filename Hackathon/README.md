@@ -7,9 +7,6 @@ Here you can have high level architecture of the application provided.
 
 ![Exercise architecture](https://github.com/rlopezherrero/GFT-EDEM-MasterData/blob/master/Hackathon/img/Diagrama.png)
 
-![Exercise architecture](img\Diagrama.png)
-
-![Exercise architecture](https://github.com/rlopezherrero/GFT-EDEM-MasterData/blob/master/Hackathon/img/Diagrama.png)
 
 ## Setup
 
