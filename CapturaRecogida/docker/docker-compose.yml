@@ -7,7 +7,8 @@ services:
   jupyter:
     image: 'jupyter/datascience-notebook:latest'
     hostname: jupyter
+    container_name: jupyter
+    environment:
+      - JUPYTER_TOKEN=edem
     ports:
       - '8888:8888'
-
-
