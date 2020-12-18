@@ -2,5 +2,5 @@
 
 On this repository we cover following training blocks:
 
-* [Elasticsearch] (./elasticsearch)
-* [Stream Processing] (./Stream procesing)
+* [Elasticsearch](./elasticsearch)
+* [Stream Processing](./Stream procesing)
