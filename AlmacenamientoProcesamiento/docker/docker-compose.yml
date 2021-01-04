@@ -1,7 +1,7 @@
 version: '2'
 
-# Infrastructure required for the "Big Data Architectures for Investment Banking" course.
-# Authors: Roberto López & Esteban Chiner
+# Infrastructure required for the Data Analytics Course
+# Authors: Roberto López 
 services:
   
   # Elasticsearch: Data Storage and Search Engine
