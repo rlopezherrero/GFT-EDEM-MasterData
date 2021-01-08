@@ -10,6 +10,8 @@ services:
     user: root
     environment:
       - JUPYTER_TOKEN=edem
+    volumes:
+      - ./config/spark-defaults.conf:/usr/local/spark-2.4.5-bin-hadoop2.7/conf/spark-defaults.conf
     ports:
       - '8888:8888'
       
