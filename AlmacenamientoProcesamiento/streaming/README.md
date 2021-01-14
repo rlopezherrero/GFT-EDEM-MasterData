@@ -1,1 +1,1 @@
-##Impelemting an Streaming Complete Architecture
+# Implementing an Streaming Complete Architecture
