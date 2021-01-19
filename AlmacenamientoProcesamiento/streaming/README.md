@@ -1,4 +1,4 @@
-# Implementing an Streaming Complete Architecture
+# Implementing a Streaming Complete Architecture
 
 Purpose of this architecture is to perform a realtime stock prices analytics. In order to achieve that, implemented architecture is able to ingest, process and analyze in real time stock prices and tweets speaking about those companies. 
 Here you have the Architecture:
